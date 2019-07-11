@@ -48,7 +48,9 @@ With the above changes the specified manifests should look as follows:
             ...
             env:
               - name: WATCH_NAMESPACE
-              value: ""
+                valueFrom:
+                  fieldRef:
+                    fieldPath: metadata.namespace
     ```
 * `deploy/role.yaml`:
     ```YAML
