@@ -39,6 +39,11 @@
 
 ### Deprecated
 
+- The package "sigs.k8s.io/controller-runtime/pkg/runtime/scheme" is deprecated. Replace this import with "sigs.k8s.io/controller-runtime/pkg/scheme" in pkg/apis/{{projectName}}/v1alpha1/register.go. ([#1512](https://github.com/operator-framework/operator-sdk/pull/1512))
+- The package "sigs.k8s.io/controller-runtime/pkg/runtime/log" is deprecated. Replace this import with "sigs.k8s.io/controller-runtime/pkg/log" in pkg/apis/{{projectName}}/v1alpha1/register.go. ([#1512](https://github.com/operator-framework/operator-sdk/pull/1512))
+- The package "sigs.k8s.io/controller-runtime/pkg/runtime/signals" is deprecated. Replace this import with "sigs.k8s.io/controller-runtime/pkg/manager/signals" in pkg/apis/{{projectName}}/v1alpha1/register.go. ([#1512](https://github.com/operator-framework/operator-sdk/pull/1512))
+- The client.List List(ctx context.Context, list runtime.Object, opts ...ListOptionFunc) error was replaced for List(ctx context.Context, opts ...ListOption, list runtime.Object) error. Following an example fix it. ([#1512](https://github.com/operator-framework/operator-sdk/pull/1512))
+
 ### Removed
 
 - The SDK no longer depends on a `vendor/` directory to manage dependencies *only if* using [Go modules](https://github.com/golang/go/wiki/Modules). The SDK and operator projects will only use vendoring if using `dep`, or modules and a `vendor/` dir is present. ([#1519](https://github.com/operator-framework/operator-sdk/pull/1519))
