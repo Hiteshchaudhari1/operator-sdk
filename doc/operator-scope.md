@@ -15,6 +15,15 @@ The SDK scaffolds operators to be namespaced by default but with a few modificat
   * Use `ClusterRole` instead of `Role` for `roleRef`
   * Set the subject namespace to the namespace in which the operator is deployed.
 
+**NOTE:** Also, you are able to define a List of Namespaces which should be watched by the operator as the following example. See the `cmd/manager/main.go` of your operator project.
+
+```Go
+    // Create a new Cmd to provide shared dependencies and start components
+    mgr, err := manager.New(cfg, manager.Options{
+        NewCache: cache.MultiNamespacedCacheBuilder(listOfNamespaces),
+    })
+```
+
 ### CRD scope
 
 Additionally the CustomResourceDefinition (CRD) scope can also be changed for cluster-scoped operators so that there is only a single instance (for a given name) of the CRD to manage across the cluster.
