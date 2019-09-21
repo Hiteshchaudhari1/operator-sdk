@@ -50,8 +50,8 @@ type Resource struct {
 	// Parsed from APIVersion
 	Group string
 
-	// GoImportGroup is the non-hyphenated go import group for this resource
-	GoImportGroup string
+	// Group is the non-hyphenated go import group for this resource
+	Group string
 
 	// Version is the API version - e.g. v1alpha1
 	// Parsed from APIVersion
@@ -130,7 +130,7 @@ func (r *Resource) checkAndSetGroups() error {
 	r.Group = g[0]
 
 	s := strings.ToLower(r.Group)
-	r.GoImportGroup = strings.Replace(s, "-", "", -1)
+	r.Group = strings.Replace(s, "-", "", -1)
 
 	if err := validation.IsDNS1123Subdomain(r.Group); err != nil {
 		return fmt.Errorf("group name is invalid: %v", err)

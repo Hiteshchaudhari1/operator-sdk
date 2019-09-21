@@ -107,7 +107,7 @@ func (s *CRD) CustomRender() ([]byte, error) {
 		if err != nil {
 			if os.IsNotExist(err) {
 				return nil, fmt.Errorf("error generating CRD for Group %s Version %s Kind %s",
-					s.Resource.GoImportGroup, s.Resource.Version, s.Resource.Kind)
+					s.Resource.Group, s.Resource.Version, s.Resource.Kind)
 			}
 			return nil, err
 		}
