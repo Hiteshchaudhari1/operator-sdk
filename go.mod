@@ -12,8 +12,12 @@ require (
 	github.com/go-logr/logr v0.1.0
 	github.com/go-logr/zapr v0.1.1
 	github.com/gobuffalo/packr v1.30.1 // indirect
+	github.com/golang/groupcache v0.0.0-20200121045136-8c9f03a8e57e // indirect
+	github.com/google/gofuzz v1.1.0 // indirect
 	github.com/google/shlex v0.0.0-20191202100458-e7afc7fbc510
+	github.com/googleapis/gnostic v0.4.1 // indirect
 	github.com/gregjones/httpcache v0.0.0-20190203031600-7a902570cb17 // indirect
+	github.com/hashicorp/golang-lru v0.5.4 // indirect
 	github.com/helm/helm-2to3 v0.2.0
 	github.com/iancoleman/strcase v0.0.0-20190422225806-e506e3ef7365
 	github.com/jmoiron/sqlx v1.2.0 // indirect
@@ -21,16 +25,17 @@ require (
 	github.com/markbates/inflect v1.0.4
 	github.com/martinlindhe/base36 v1.0.0
 	github.com/mattbaird/jsonpatch v0.0.0-20171005235357-81af80346b1a
-	github.com/mattn/go-isatty v0.0.8
+	github.com/mattn/go-isatty v0.0.9
 	github.com/mitchellh/go-homedir v1.1.0
 	github.com/mitchellh/mapstructure v1.1.2
 	github.com/operator-framework/api v0.0.0-20200120235816-80fd2f1a09c9
 	github.com/operator-framework/operator-lifecycle-manager v0.0.0-20191115003340-16619cd27fa5
 	github.com/operator-framework/operator-registry v1.5.7-0.20200121213444-d8e2ec52c19a
 	github.com/pborman/uuid v1.2.0
-	github.com/pkg/errors v0.8.1
-	github.com/prometheus/client_golang v1.2.1
-	github.com/prometheus/common v0.7.0
+	github.com/pkg/errors v0.9.1
+	github.com/prometheus/client_golang v1.4.1
+	github.com/prometheus/common v0.9.1
+	github.com/prometheus/procfs v0.0.10 // indirect
 	github.com/rogpeppe/go-internal v1.5.0
 	github.com/rubenv/sql-migrate v0.0.0-20191025130928-9355dd04f4b3 // indirect
 	github.com/sergi/go-diff v1.0.0
@@ -42,28 +47,35 @@ require (
 	github.com/stretchr/testify v1.4.0
 	github.com/ziutek/mymysql v1.5.4 // indirect
 	go.uber.org/zap v1.10.0
+	golang.org/x/crypto v0.0.0-20200214034016-1d94cc7ab1c6 // indirect
+	golang.org/x/net v0.0.0-20200202094626-16171245cfb2 // indirect
+	golang.org/x/oauth2 v0.0.0-20200107190931-bf48bf16ab8d // indirect
+	golang.org/x/sys v0.0.0-20200212091648-12a6c2dcc1e4 // indirect
 	golang.org/x/tools v0.0.0-20191018212557-ed542cd5b28a
 	gopkg.in/gorp.v1 v1.7.2 // indirect
-	gopkg.in/yaml.v2 v2.2.4
+	gopkg.in/yaml.v2 v2.2.8
 	helm.sh/helm/v3 v3.0.1
-	k8s.io/api v0.0.0
-	k8s.io/apiextensions-apiserver v0.0.0
-	k8s.io/apimachinery v0.0.0
-	k8s.io/cli-runtime v0.0.0
+	k8s.io/api v0.17.3
+	k8s.io/apiextensions-apiserver v0.17.3
+	k8s.io/apimachinery v0.17.3
+	k8s.io/cli-runtime v0.17.3
 	k8s.io/client-go v12.0.0+incompatible
 	k8s.io/code-generator v0.0.0
 	k8s.io/gengo v0.0.0-20191010091904-7fa3014cb28f
 	k8s.io/helm v2.16.1+incompatible
 	k8s.io/klog v1.0.0
-	k8s.io/kube-openapi v0.0.0-20190918143330-0270cf2f1c1d
+	k8s.io/kube-openapi v0.0.0-20200204173128-addea2498afe
 	k8s.io/kube-state-metrics v1.7.2
 	k8s.io/kubectl v0.0.0
-	k8s.io/kubernetes v1.16.2 // indirect
-	sigs.k8s.io/controller-runtime v0.4.0
+	k8s.io/kubernetes v1.17.3 // indirect
+	k8s.io/utils v0.0.0-20200124190032-861946025e34 // indirect
+	sigs.k8s.io/controller-runtime v0.5.0
 	sigs.k8s.io/controller-tools v0.2.4
+	sigs.k8s.io/testing_frameworks v0.1.2 // indirect
+	sigs.k8s.io/yaml v1.2.0 // indirect
 )
 
-// Pinned to kubernetes-1.16.2
+// Pinned to kubernetes-1.17.3
 replace (
 	k8s.io/api => k8s.io/api v0.0.0-20191016110408-35e52d86657a
 	k8s.io/apiextensions-apiserver => k8s.io/apiextensions-apiserver v0.0.0-20191016113550-5357c4baaf65
