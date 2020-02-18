@@ -42,7 +42,8 @@ const aoLogsTmpl = `#!/bin/bash
 watch_dir=${1:-/tmp/ansible-operator/runner}
 filename=${2:-stdout}
 mkdir -p ${watch_dir}
-inotifywait -r -m -e close_write ${watch_dir} | while read dir op file
+
+watch -d -t -g ls -lR ${watch_dir} | while read dir op file
 do
   if [[ "${file}" = "${filename}" ]] ; then
     echo "${dir}/${file}"
