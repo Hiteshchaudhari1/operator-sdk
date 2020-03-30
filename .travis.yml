@@ -80,7 +80,6 @@ x_base_steps:
   # Manifest list deploy job
   - &manifest-deploy
     stage: "Deploy multi-arch manifest lists"
-    if: type != pull_request AND ( tag IS present OR branch = master OR commit_message =~ /\[travis deploy\]/ )
     before_script:
       - git config remote.origin.fetch +refs/heads/*:refs/remotes/origin/*
       - git fetch --unshallow --tags
