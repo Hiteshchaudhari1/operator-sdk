@@ -63,7 +63,6 @@ x_base_steps:
   # Base deploy job
   - &deploy
     stage: deploy
-    if: type != pull_request AND ( tag IS present OR branch = master OR commit_message =~ /\[travis deploy\]/ )
     before_install:
       - travis_retry make tidy
     install: make install
